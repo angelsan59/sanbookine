@@ -1,0 +1,206 @@
+html, body {
+font-family: arial, sans-serif; 
+margin-top:0px;
+margin-left: 0px;
+
+}
+
+
+body {
+	background: 	#e2d8e9;
+	background-image: url('img/fond.jpg');
+	/* padding-bottom: 65px; */
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	margin-top:0px;
+	margin-left: 0px;
+	width:100%;
+}
+
+header {
+margin-bottom:20px;
+margin-left: auto; 
+margin-right: auto; 
+text-align:center;
+background-color: rgba(255,255, 255, 0.7);
+}
+
+a {
+	text-decoration: none;
+	color:#f46d5d;
+	font-weight:bold;
+	}
+
+a:hover,
+a:focus {
+	
+	text-shadow: 3px 3px 3px #a3a3a3;
+	color: #2a4d69;
+	
+}
+
+.menu{text-align:center;}
+
+.menu ul{padding-top:0px;}
+
+nav {
+	margin-top:0px;
+	margin-left: 0px; 
+margin-right: auto; 
+/*background-color: #333;*/
+	
+}
+
+/* les icones */
+ i{
+	 vertical-align: middle;
+	 padding-right:10px;
+	 padding-top:0px;
+	 font-size:24px;
+ }
+
+ i:hover{
+		color:#eb3812;	
+		  -webkit-transform: scale(1.2);
+     -moz-transform: scale(1.2);
+     -o-transform: scale(1.2);
+	  -webkit-transition-duration: 0.2s;
+     -moz-transition-duration: 0.2s;
+     -o-transition-duration: 0.2s;
+}
+
+/* les titre h */
+
+h2{
+	font-family: 'Courgette', cursive;
+	font-size:2em;
+	margin-top:0px;
+	margin-bottom:0px;
+	padding-bottom:10px;
+}
+
+h1{
+	font-family: 'Courgette', cursive;
+font-size:4em;
+text-align:center;
+font-weight:bold;
+margin-bottom:0px;
+margin-top:0px;
+padding:5px;
+ text-shadow: 5px 5px 5px #ccc;
+
+}
+
+h1:before, h1:after {
+  content: "";
+  display: inline-block;
+  width: 20%;
+  margin: 0 .5em 0 -55%;
+  vertical-align: middle;
+  border-bottom: 1px solid;
+  border-style: ridge;
+}
+h1:after {
+  margin: 0 -55% 0 .5em;
+}
+.line {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#banner{
+	border-radius: 50%;
+	text-align:center;
+	 border: 1px solid #ddd;
+	 padding: 5px;
+	 background-color:#fff;
+	 box-shadow:8px 8px 10px #aaa;
+	
+}
+
+ul.nav {
+	margin-top:0px;
+    list-style-type: none;
+    background-color: #0d8e9a;
+    padding-bottom:0px;
+    overflow: hidden;
+    
+}
+
+li.nav {
+    float: left;
+	box-sizing: border-box;
+	
+}
+
+li.nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	vertical-align:middle;
+	
+}
+
+/* Change the link color to #111 (black) on hover */
+li.nav a:hover {
+    background-color: #fff;
+	color:#000;
+	text-shadow: 5px 5px 5px #ccc;
+}
+
+.active {
+    background-color: #f46d5d;
+}
+
+/* option button non utilisée, remplacée par la liste */
+
+.button {
+	 display: inline-block;
+	padding: 7px;
+	box-sizing: border-box;
+	background-color:	#f46d5d;
+	margin-right:10px;
+	color:#ffffff;
+	border-radius: 25px;
+	border: 1px solid #612b25;
+}
+.button:hover  {
+	
+	background-color:#0d8e9a;
+	color: #fdd75f;
+	
+	border-radius: 25px;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+	border: 1px solid #2a4d69;
+}
+
+/* fin button */
+
+
+/* Style du formulaire */
+#form {
+display: inline-block;
+/*margin-right: auto; */
+background-color: #fff;
+border: 1px solid #ccc;	
+ border-radius: 25px;
+ box-shadow:8px 8px 10px #aaa;
+ padding:20px;
+ 
+}
+
+#liste{
+		display: inline-block;
+background-color: #fff;
+border: 1px solid #ccc;	
+ border-radius: 25px;
+ box-shadow:8px 8px 10px #aaa;
+ padding:20px;
+ padding-top:0px;
+	}
+
+section{text-align:left;}
+
+
