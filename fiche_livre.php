@@ -56,8 +56,10 @@ $statement = get_livre($_GET['id_livre']);
 
 		if($donnees = $statement->fetch())
 {
-			$donnee['titre'] = htmlspecialchars($donnees['titre']);
-			$donnee['auteur'] = htmlspecialchars($donnees['auteur']);
+			$donnee['titre'] = utf8_encode($donnees['titre']);
+			$titre = htmlspecialchars($donnee['titre']);
+			$donnee['auteur'] = utf8_encode($donnees['auteur']);
+			$auteur = htmlspecialchars($donnee['auteur']);
 			$donnee['resume'] = utf8_encode($donnees['resume']);
 			$resume=htmlspecialchars($donnee['resume']);
 			

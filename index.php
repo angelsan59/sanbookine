@@ -35,8 +35,8 @@ session_start(); // On démarre la session AVANT toute chose
     <div class="element"><img src="img/books.png" alt="books" /></div>
     <div class="element"><h1>SanBooKine</h1>
 	<h2>La bibliothèque de mes lectures passées, présentes et futures</h2>
-<p style="padding-bottom:10px;">Depuis l'enfance, j'ai toujours beaucoup lu, et maintenant plus que jamais. Mais combien de livres ai-je vraiment lu? Quels sont-ils? 
-Ai-je aimé? Et que vais-je lire par la suite?</p></div>
+<p style="padding-bottom:10px;">Depuis l'enfance, j'ai toujours beaucoup lu, et maintenant plus que jamais. Mais combien de livres ai-je vraiment lus ? Quels sont-ils ? 
+Ai-je aimé ? Et que vais-je lire par la suite ?</p></div>
     <div class="element"><img src="img/books.png" alt="books" /></div>
 </div>
 </header>
@@ -55,8 +55,10 @@ $donnees = $statement->fetchAll();
 
 foreach ($donnees as $donnee)
 {
-       $donnee['titre'] = htmlspecialchars($donnee['titre']);
-	   //echo $donnee['titre'];
+      $donne['titre'] = utf8_encode($donnee['titre']);
+			$titre = htmlspecialchars($donne['titre']);
+			$donne['auteur'] = utf8_encode($donnee['auteur']);
+			$auteur = htmlspecialchars($donne['auteur']);
 }
 
 

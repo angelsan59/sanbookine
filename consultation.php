@@ -56,9 +56,14 @@ if (isset($_GET['lu']))
 		$statement = get_list_livre($_GET['lu']);}
 else
 {$statement = get_all_livre();}
-
-		$donnees = $statement->fetchAll();
-
+$donnees = $statement->fetchAll();
+		foreach ($donnees as $donnee)
+{
+		$donne['titre'] = utf8_encode($donnee['titre']);
+			$titre = htmlspecialchars($donne['titre']);
+			$donne['auteur'] = utf8_encode($donnee['auteur']);
+			$auteur = htmlspecialchars($donne['auteur']);
+}
 include_once('vues/v_liste_titre_auteur.php');
 $statement->closeCursor();
 ?>

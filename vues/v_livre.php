@@ -1,6 +1,6 @@
 
 <section class="livre">
-    <p style="font-family: 'Oswald', sans-serif;font-size:2em;margin-top:0px;margin-bottom:0px;"><?php echo $donnee['titre']; ?><?php
+    <p style="font-family: 'Oswald', sans-serif;font-size:2em;margin-top:0px;margin-bottom:0px;"><?php echo $titre; ?><?php
 		if ($_SESSION['id_user']==$donnees['id_user'])
 		{ ?>
 		<a href="mod_livres.php?id_livre=<?php echo $donnees['id']; ?>">
@@ -10,7 +10,7 @@
 		
 		<?php }
 		?></p>
-	<p style="text-align:right;">par  <?php echo $donnee['auteur']; ?></p>
+	<p style="text-align:right;">par  <?php echo $auteur; ?></p>
 	<p style="font-size:0.9em;"><?php 
 	
 	if($donnees['lu']=='oui')
@@ -22,7 +22,7 @@
 echo $donnees['jour'] . '/' . $donnees['mois'] . '/' . $donnees['annee'];
 ?> - <b><?php echo $donne['nom_cat']; ?></b></p>
    <fieldset>
-   <p style="font-family: 'tahoma', sans-serif;font-size:1em;margin-top:0px;letter-spacing: -0.8px;"><?php echo $donnee['resume']; ?></p>
+   <p style="font-family: 'tahoma', sans-serif;font-size:1em;margin-top:0px;letter-spacing: -0.8px;"><?php echo $resume; ?></p>
    </fieldset>
 </section>
 
