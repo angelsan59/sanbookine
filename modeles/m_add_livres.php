@@ -33,14 +33,15 @@ $statement->closeCursor();
 function mod_livre()
 {
 	global $db;
-	if (isset($_POST['titre']) AND $_POST['auteur'])
+	if (isset($_POST['titre']) AND $_POST['auteur'] AND $_POST['id_livre'])
 	{
 		$titre = utf8_decode ( $_POST["titre"] );
 		$auteur = utf8_decode ( $_POST["auteur"] );
 		$resume = utf8_decode ( $_POST["resume"] );
-$statement=$db->prepare("INSERT INTO sbk_book (titre, auteur, resume, note, lu, date_ajout, id_user, id_cat) 
-VALUES(:titre, :auteur, :resume, :note, :lu, NOW(), :id_user, :id_cat)");
-$statement->execute(array(
+$statement2=$db->prepare("UPDATE sbk_book SET titre = :titre, auteur = :auteur, resume = :resume, note = :note,
+ lu = :lu, id_user = :id_user, id_cat = :id_cat WHERE id = :id_livre");
+$statement2->execute(array(
+'id_livre' => $_POST['id_livre'],
 	'titre' => $titre,
 	'auteur' => $auteur,
 	'resume' => $resume,
@@ -50,10 +51,10 @@ $statement->execute(array(
 	'id_cat' => $_POST['id_cat']
 	));
 	
-	echo 'Le livre a bien été ajouté !';
+	echo 'Le livre a bien été modifié !';
 /*$statement->execute(); */
-return $statement;
-$statement->closeCursor();
+return $statement2;
+$statement2->closeCursor();
 		
 		
 	}

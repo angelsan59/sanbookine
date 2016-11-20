@@ -3,7 +3,7 @@ session_start(); // On démarre la session AVANT toute chose
 ?>
 <!DOCTYPE html>
 <html lang="fr">
-<title>SanBOOKine - Recherche de livre</title>
+<title>SanBooKine - Recherche de livre</title>
 
 	<head>
 	<link rel="stylesheet" href="css/stylemain.css" />
@@ -25,29 +25,24 @@ session_start(); // On démarre la session AVANT toute chose
 	
 	<style>
 	body{background-image: url("img/fond.jpg");}
-	#liste{
-		display: inline-block;
-background-color: #fff;
-border: 1px solid #ccc;	
- border-radius: 25px;
- box-shadow:8px 8px 10px #aaa;
- padding:20px;
-	}
 	</style>
 	
 	</head>
 <body>
 <?php include_once('vues/v_navbar.php'); ?>
 <header>
-<h1>SanBooKine</h1>
-<p><a href="consultation.php?lu=oui" class="button">Livres lus</a> | 
-<a href="consultation.php?lu=non" class="button">Livres à lire</a> | 
-<a href="consultation.php" class="button">Tous les livres</a></p>
-
+<div id="conteneur">
+    <div class="element"><img src="img/books.png" alt="books" /></div>
+    <div class="element"><h1>SanBooKine</h1>
+	<h2>Recherche</h2>
+</div>
+    <div class="element"><img src="img/books.png" alt="books" /></div>
+</div>
 </header>
+<?php include_once("vues/v_menu.php"); ?>
 <div align="center">
-<section id="search">
-<h2>Recherche</h2>
+<section id="liste">
+
 <?php 
 require_once("connexion.php");
 $db = Connexion::getInstance();
@@ -74,5 +69,6 @@ else
 		
 ?>
 </section></div>
+<?php include_once('vues/v_footer.php'); ?>
 </body>
 </html>

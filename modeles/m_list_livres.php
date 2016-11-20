@@ -4,12 +4,22 @@
 function get_livre($id_livre)
 {
 global $db;
-$statement=$db->prepare("SELECT * FROM sbk_book WHERE id= :id_livre");
+$statement=$db->prepare("SELECT id,titre, auteur,resume,note,lu,DAY(date_ajout) AS jour, 
+MONTH(date_ajout) AS mois, YEAR(date_ajout) AS annee,id_user,id_cat FROM sbk_book WHERE id= :id_livre");
 $statement->bindParam(':id_livre', $id_livre, PDO::PARAM_INT);
 $statement->execute();
 return $statement;
 }
 
+/* recherche catégorie du livre */
+function get_cat($id_cat)
+{
+global $db;
+$statement1=$db->prepare("SELECT * FROM sbk_categorie WHERE id= :id_cat");
+$statement1->bindParam(':id_cat', $id_cat, PDO::PARAM_INT);
+$statement1->execute();
+return $statement1;
+}
 
 /* Liste titre - auteur de tous les livres par auteur et titre, sélection lu ou à lire */
 function get_list_livre($lu)

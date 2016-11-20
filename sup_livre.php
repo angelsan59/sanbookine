@@ -31,9 +31,13 @@ session_start(); // On démarre la session AVANT toute chose
 <body>
 <?php include_once('vues/v_navbar.php'); ?>
 <header>
-<h1>SanBooKine</h1>
-
-<h2>Suppression de livre</h2>
+<div id="conteneur">
+    <div class="element"><img src="img/books.png" alt="books" /></div>
+    <div class="element"><h1>SanBooKine</h1>
+	<h2>Suppression de livre</h2>
+</div>
+    <div class="element"><img src="img/books.png" alt="books" /></div>
+</div>
 </header>
 <div align="center">
 <section id="liste">

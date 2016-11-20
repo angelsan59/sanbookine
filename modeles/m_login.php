@@ -10,12 +10,12 @@ function loggin()
 		
 		if ($donnees = $statement->fetch())
 		{
-			echo 'Bonjour' . $donnees['pseudo'] . ', vous êtes désormais connecté pour cette session et pouvez donc gérer les livres.';
+			echo 'Bonjour ' . $donnees['pseudo'] . ', vous êtes désormais connecté pour cette session et pouvez donc gérer les livres.<br />';
 			
 			$_SESSION['pseudo'] = $donnees['pseudo'];
 			$_SESSION['pass'] = $donnees['pass'];
 			$_SESSION['id_user'] = $donnees['id'];
-			header('Location: admin.php');
+			
 		}
 		else
 		{

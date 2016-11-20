@@ -13,12 +13,11 @@ foreach ($donnees as $donnee)
 		<?php
 		if ($_SESSION['id_user']==$donnee['id_user'])
 		{ ?>
-		<a href="mod_livre.php?id_livre=<?php echo $donnee['id']; ?>"><i class="fa fa-pencil" style="color:#ff9006; margin-left:5px;"></i></a> 
+		<a href="mod_livres.php?id_livre=<?php echo $donnee['id']; ?>"><i class="fa fa-pencil" style="color:#ff9006; margin-left:5px;"></i></a> 
 		<a href="sup_livre.php?id_livre=<?php echo $donnee['id']; ?>&id_user=<?php echo $donnee['id_user']; ?>" onclick="return confirm('Etes-vous sûr ?');">
 		<i class="fa fa-times-circle" style="color:#ba0404;"></i></a></li>
 		
 		<?php }
-		else {echo 'rien';}
 		?>
     </ul>
     

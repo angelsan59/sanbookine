@@ -31,11 +31,14 @@ session_start(); // On démarre la session AVANT toute chose
 <body>
 <?php include_once('vues/v_navbar.php'); ?>
 <header>
-<h1>SanBooKine</h1>
-
-<h2>La bibliothèque de mes lectures passées, présentes et futures</h2>
+<div id="conteneur">
+    <div class="element"><img src="img/books.png" alt="books" /></div>
+    <div class="element"><h1>SanBooKine</h1>
+	<h2>La bibliothèque de mes lectures passées, présentes et futures</h2>
 <p style="padding-bottom:10px;">Depuis l'enfance, j'ai toujours beaucoup lu, et maintenant plus que jamais. Mais combien de livres ai-je vraiment lu? Quels sont-ils? 
-Ai-je aimé? Et que vais-je lire par la suite?</p>
+Ai-je aimé? Et que vais-je lire par la suite?</p></div>
+    <div class="element"><img src="img/books.png" alt="books" /></div>
+</div>
 </header>
 <div align="center">
 <section id="liste">

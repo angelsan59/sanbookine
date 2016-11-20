@@ -22,16 +22,25 @@ session_start(); // On démarre la session AVANT toute chose
     <META CONTENT='NO-CACHE' HTTP-EQUIV='PRAGMA'/>
 	<meta charset="utf-8" />
 	<link rel="SHORTCUT ICON" href="favicon.ico">
+	
+	<style>
+	body{background-image: url("img/fond.jpg");}
+	</style>
 	</head>
 <body>
 <?php include_once('vues/v_navbar.php'); ?>
 <header>
-<h1>SanBooKine</h1>
-<h2>Page de login</h2>
-<p>Pour le but de la démonstration, entrez "demo" et "demo". Vous pourrez alors essayer la gestion de livres.</p>
+<div id="conteneur">
+    <div class="element"><img src="img/books.png" alt="books" /></div>
+    <div class="element"><h1>SanBooKine</h1>
+	<h2>Page de login</h2>
+	<p style="padding-bottom:10px;">Pour le but de la démonstration, entrez "demo" et "demo". Vous pourrez alors essayer la gestion de livres.</p>
+</div>
+    <div class="element"><img src="img/books.png" alt="books" /></div>
+</div>
 </header>
 <div align="center">
-<section id="login">
+<section id="liste">
 
 <?php 
 
@@ -54,5 +63,6 @@ include_once('vues/v_login_form.php');
 ?>
 </section>
 </div>
+<?php include_once('vues/v_footer.php'); ?>
 </body>
 </html>

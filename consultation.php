@@ -3,7 +3,7 @@ session_start(); // On démarre la session AVANT toute chose
 ?>
 <!DOCTYPE html>
 <html lang="fr">
-<title>SanBooKine - cosultation des livres</title>
+<title>SanBooKine - Consultation des livres</title>
 
 	<head>
 	<link rel="stylesheet" href="css/stylemain.css" />
@@ -32,12 +32,16 @@ session_start(); // On démarre la session AVANT toute chose
 <body>
 <?php include_once('vues/v_navbar.php'); ?>
 <header>
-<h1>SanBooKine</h1>
-<h2>Liste de livres</h2>
+<div id="conteneur">
+    <div class="element"><img src="img/books.png" alt="books" /></div>
+    <div class="element"><h1>SanBooKine</h1>
+	<h2>Liste de livres</h2>
+</div>
+    <div class="element"><img src="img/books.png" alt="books" /></div>
+</div>
 </header>
-<p class="menu"><a href="consultation.php?lu=oui" class="button"><i class="material-icons">bookmark</i>Livres lus</a>
-<a href="consultation.php?lu=non" class="button"><i class="material-icons">bookmark_border</i>Livres à lire</a>
-<a href="consultation.php" class="button"><i class="material-icons">local_library</i>Tous les livres</a></p>
+
+<?php include_once("vues/v_menu.php"); ?>
 
 <div align="center">
 <section id="liste">
@@ -59,5 +63,6 @@ include_once('vues/v_liste_titre_auteur.php');
 $statement->closeCursor();
 ?>
 </section></div>
+<?php include_once('vues/v_footer.php'); ?>
 </body>
 </html>

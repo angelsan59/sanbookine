@@ -3,14 +3,13 @@ session_start(); // On démarre la session AVANT toute chose
 ?>
 <!DOCTYPE html>
 <html lang="fr">
-<title>SanBooKine - Fiche livre</title>
+<title>SanBooKine - A propos de</title>
 
 	<head>
 	<link rel="stylesheet" href="css/stylemain.css" />
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
      <META CONTENT='SanBOOKine' NAME='TITLE'/>
     <META CONTENT='AngelSan' NAME='AUTHOR'/>
     <META CONTENT='angelsan@gmail.com' NAME='OWNER'/>
@@ -27,6 +26,7 @@ session_start(); // On démarre la session AVANT toute chose
 	
 	<style>
 	body{background-image: url("img/fond.jpg");}
+	p{padding:10px;}
 	</style>
 	
 	</head>
@@ -36,42 +36,24 @@ session_start(); // On démarre la session AVANT toute chose
 <div id="conteneur">
     <div class="element"><img src="img/books.png" alt="books" /></div>
     <div class="element"><h1>SanBooKine</h1>
-	
+	<h2>A propos du projet</h2>
 </div>
     <div class="element"><img src="img/books.png" alt="books" /></div>
 </div>
 </header>
+
 <?php include_once("vues/v_menu.php"); ?>
+
 <div align="center">
 <section id="liste">
-<?php 
-require_once("connexion.php");
-$db = Connexion::getInstance();
-
-if (isset($_GET['id_livre']))
-	{
-include_once('modeles/m_list_livres.php');
-
-$statement = get_livre($_GET['id_livre']);
-
-		if($donnees = $statement->fetch())
-{
-			$donnee['titre'] = htmlspecialchars($donnees['titre']);
-			$donnee['auteur'] = htmlspecialchars($donnees['auteur']);
-			$donnee['resume'] = utf8_encode($donnees['resume']);
-			$resume=htmlspecialchars($donnee['resume']);
-			
-			$statement1 = get_cat($donnees['id_cat']);
-			$donne = $statement1->fetch();
-			
-include_once('vues/v_livre.php');
-}
-
-else {echo 'Pas de numéro de livre, retournez à la liste. ';}
-
-$statement->closeCursor();
-	}
-?>
+<p>L'idée de bibliothèque personnelle me trotte depuis longtemps dans la tête. Je lis énormément, mais je voulais avoir
+une trace de ce que je lis, un peu comme mon blog de loisirs créatifs me sert de portfolio. J'ai regardé ce qui était disponible 
+sur le marché, mais rien ne me convient vraiment.</p>
+<p>Mais voilà que ma formation de conception développement informatique m'amène sur la piste du php/mysql. Et c'est l'occasion rêvée de 
+pratiquer en live !</p>
+<p>Pour l'instant, l'appli est un peu basique, mais elle s'étoffera avec le temps. Je pense notament à ajouter des images de couverture,
+ des liens, etc...</p>
+ <p> N'hésitez pas à m'envoyer vos commentaires et vos idées à sandrine point ociepka at gmail.com</p>
 </section></div>
 <?php include_once('vues/v_footer.php'); ?>
 </body>

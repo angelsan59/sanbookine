@@ -3,14 +3,14 @@ session_start(); // On démarre la session AVANT toute chose
 ?>
 <!DOCTYPE html>
 <html lang="fr">
-<title>SanBOOKine</title>
+<title>SanBooKine Gestion de livres</title>
 
 	<head>
 	<link rel="stylesheet" href="css/stylemain.css" />
 
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
-     <META CONTENT='SanBOOKine' NAME='TITLE'/>
+     <META CONTENT='SanBooKine' NAME='TITLE'/>
     <META CONTENT='AngelSan' NAME='AUTHOR'/>
     <META CONTENT='angelsan@gmail.com' NAME='OWNER'/>
     <META CONTENT='Bibliothèque de mes lectures passées, prsentes et futures' NAME='SUBJECT'/>
@@ -23,27 +23,34 @@ session_start(); // On démarre la session AVANT toute chose
     <META CONTENT='NO-CACHE' HTTP-EQUIV='PRAGMA'/>
 	<meta charset="utf-8" />
 	<link rel="SHORTCUT ICON" href="favicon.ico">
+	<style>
+	body{background-image: url("img/fond.jpg");}
+	</style>
 	</head>
 <body>
 <?php include_once('vues/v_navbar.php'); ?>
 <header>
-<h1>SanBOOKine</h1>
-
+<div id="conteneur">
+    <div class="element"><img src="img/books.png" alt="books" /></div>
+    <div class="element"><h1>SanBooKine</h1>
+	<h2>Ajout de livre</h2>
+</div>
+    <div class="element"><img src="img/books.png" alt="books" /></div>
+</div>
 </header>
 <div align="center">
-<section id="add_book">
-<h2>Ajout d'un livre</h2>
+<section id="liste">
 <?php 
 require_once("connexion.php");
 $db = Connexion::getInstance();
 
 include_once('modeles/m_add_livres.php');
 $statement = add_livre();
-
 include_once('vues/v_add_form.php');
 
 
 ?>
 </section></div>
+<?php include_once('vues/v_footer.php'); ?>
 </body>
 </html>

@@ -2,9 +2,9 @@ html, body {
 font-family: arial, sans-serif; 
 margin-top:0px;
 margin-left: 0px;
+height:100%;
 
 }
-
 
 body {
 	background: 	#e2d8e9;
@@ -17,7 +17,7 @@ body {
 	width:100%;
 }
 
-header {
+header, footer {
 margin-bottom:20px;
 margin-left: auto; 
 margin-right: auto; 
@@ -25,6 +25,19 @@ text-align:center;
 background-color: rgba(255,255, 255, 0.7);
 }
 
+#conteneur
+{
+    display: flex;
+	justify-content: space-around;
+}
+
+footer{margin-bottom:0px;}
+
+footer p{
+	font-style: italic;
+	padding:10px;
+	font-size:0.8em;
+}
 a {
 	text-decoration: none;
 	color:#f46d5d;
@@ -42,7 +55,7 @@ a:focus {
 .menu{text-align:center;}
 
 .menu ul{padding-top:0px;}
-
+  
 nav {
 	margin-top:0px;
 	margin-left: 0px; 
@@ -179,17 +192,16 @@ li.nav a:hover {
 /* fin button */
 
 
-/* Style du formulaire */
+/* Style du formulaire 
 #form {
 display: inline-block;
-/*margin-right: auto; */
 background-color: #fff;
 border: 1px solid #ccc;	
  border-radius: 25px;
  box-shadow:8px 8px 10px #aaa;
  padding:20px;
  
-}
+}*/
 
 #liste{
 		display: inline-block;
