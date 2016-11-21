@@ -1,9 +1,7 @@
 ﻿
 <?php
 foreach ($donnees as $donnee)
-{
-	$donnee['titre'] = htmlspecialchars($donnee['titre']);
-			$donnee['auteur'] = htmlspecialchars($donnee['auteur']);
+{ 
 ?>
 <div class="livre">
     <ul class="fa-ul">
@@ -11,7 +9,7 @@ foreach ($donnees as $donnee)
 		<?php echo $donnee['titre']; ?></a> par  <?php echo $donnee['auteur']; ?>  
 		
 		<?php
-		if ($_SESSION['id_user']==$donnee['id_user'])
+		if (isset($_SESSION['id_user']) && $_SESSION['id_user']==$donnee['id_user'])
 		{ ?>
 		<a href="mod_livres.php?id_livre=<?php echo $donnee['id']; ?>"><i class="fa fa-pencil" style="color:#ff9006; margin-left:5px;"></i></a> 
 		<a href="sup_livre.php?id_livre=<?php echo $donnee['id']; ?>&id_user=<?php echo $donnee['id_user']; ?>" onclick="return confirm('Etes-vous sûr ?');">

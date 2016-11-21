@@ -1,7 +1,7 @@
 
 <section class="livre">
     <p style="font-family: 'Oswald', sans-serif;font-size:2em;margin-top:0px;margin-bottom:0px;"><?php echo $titre; ?><?php
-		if ($_SESSION['id_user']==$donnees['id_user'])
+		if (isset($_SESSION['id_user']) && $_SESSION['id_user']==$donnee['id_user'])
 		{ ?>
 		<a href="mod_livres.php?id_livre=<?php echo $donnees['id']; ?>">
 		<i class="fa fa-pencil" style="color:#ff9006; margin-left:5px;font-size:16px;"></i></a> 

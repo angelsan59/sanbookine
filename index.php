@@ -24,7 +24,8 @@ session_start(); // On démarre la session AVANT toute chose
 	<link rel="SHORTCUT ICON" href="favicon.ico">
 	
 	<style>
-	body{background-image: url("img/fond.jpg");}
+	body{background-image: url("img/fond.jpg");
+	background-repeat: repeat;}
 	</style>
 	
 	</head>
